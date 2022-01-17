@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <!-- Root Menu -->
+        <menuitem name="Materials" id="materials.menu_root"/>
+
+        <!-- Top Menu -->
+        <menuitem name="Material List" id="materials.menu_1" parent="materials.menu_root" action="material_material_action"/>
+        <menuitem name="Supplier List" id="materials.menu_2" parent="materials.menu_root" action="material_supplier_action"/>
+    </data>
+</odoo>

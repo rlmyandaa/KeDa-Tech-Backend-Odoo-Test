@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+    <!-- materials model action -->
+    <record model="ir.actions.act_window" id="material_material_action">
+      <field name="name">Materials</field>
+      <field name="res_model">materials.materials</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- materials model list view -->
+    <record model="ir.ui.view" id="materials.list">
+      <field name="name">Materials list</field>
+      <field name="model">materials.materials</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="material_code"/>
+          <field name="material_name"/>
+          <field name="material_type"/>
+          <field name="material_buy_price"/>
+          <field name="material_supplier" string="Related Supplier"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- materials model form -->
+    <record model="ir.ui.view" id="materials.form">
+      <field name="name">Materials form</field>
+      <field name="model">materials.materials</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <h1>
+              Form Input Material
+            </h1>
+            <group>
+              <field name="material_code" required="1" placeholder="Enter material code"/>
+              <field name="material_name" required="1" placeholder="Enter material name"/>
+              <field name="material_type" widget="selection" required="1" placeholder="Click to open dropdown"/>
+              <field name="material_buy_price" on_change="_onchange_buy_price" required="1" placeholder="Enter buy price"/>
+              <field name="material_supplier" widget="selection" required="1" help="Create supplier list first in Supplier menu if nothing shows" placeholder="Enter supplier"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+  </data>
+</odoo>
