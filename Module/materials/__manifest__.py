@@ -17,9 +17,8 @@
         'views/materials.xml',
         'views/menu.xml',
     ],
-    'demo': [
-        'demo/demo.xml',
-    ],
+    'demo': [],
+    'test': [],
     'installable': True,
     'application': True,
 }

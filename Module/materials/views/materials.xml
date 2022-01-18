@@ -36,8 +36,8 @@
               <field name="material_code" required="1" placeholder="Enter material code"/>
               <field name="material_name" required="1" placeholder="Enter material name"/>
               <field name="material_type" widget="selection" required="1" placeholder="Click to open dropdown"/>
-              <field name="material_buy_price" on_change="_onchange_buy_price" required="1" placeholder="Enter buy price"/>
-              <field name="material_supplier" widget="selection" required="1" help="Create supplier list first in Supplier menu if nothing shows" placeholder="Enter supplier"/>
+              <field name="material_buy_price" required="1" placeholder="Enter buy price"/>
+              <field name="material_supplier" widget="selection" required="1" help="Create supplier list first in Supplier menu if nothing shows" placeholder="Click to select related supplier"/>
             </group>
           </sheet>
         </form>
